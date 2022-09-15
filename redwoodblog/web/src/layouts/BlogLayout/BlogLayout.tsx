@@ -1,11 +1,12 @@
 import { Link, routes } from '@redwoodjs/router'
-import { MetaTags } from '@redwoodjs/web'
 
-const HomePage = () => {
+type BlogLayoutProps = {
+  children?: React.ReactNode
+}
+
+const BlogLayout = ({ children }: BlogLayoutProps) => {
   return (
     <>
-      <MetaTags title="Home" description="Home page" />
-
       <header>
         <h1>Redwood Blog</h1>
         <nav>
@@ -16,9 +17,9 @@ const HomePage = () => {
           </ul>
         </nav>
       </header>
-      <main>Home</main>
+      <main>{children}</main>
     </>
   )
 }
 
-export default HomePage
+export default BlogLayout
