@@ -24,4 +24,3 @@ export const Failure = ({ error }: CellFailureProps) => (
 export const Success = ({ article }: CellSuccessProps<ArticleQuery>) => {
   return <Article article={article} />
 }
-
